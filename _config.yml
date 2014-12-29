@@ -25,7 +25,9 @@ disqus: ''
 comments: true
 
 permalink: /:year/:month/:title
+
 paginate: 3
+paginate_path: "/page/:num/"
 
 markdown: redcarpet
 highlighter: pygments

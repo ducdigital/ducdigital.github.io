@@ -1,0 +1,126 @@
+// Nav Bar
+nav.navbar {
+	header {
+		margin: 0 auto;
+	}
+	h1#logo {
+		font-size: 2em;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		line-height: 1em;
+		text-transform: uppercase;
+		overflow: hidden;
+		white-space: nowrap;
+		a {
+			color: #313131;
+		}
+		span {
+			display: inline-block;
+		}
+		span.i, span.o {
+			position: absolute;
+		}
+		a span.i {
+			color: #963326;
+		}
+		a span.o {
+			color: #9CC273;
+			margin-left: 7px;
+		}
+		span.full {
+			width: 66px;
+			overflow: hidden;
+		}
+		svg {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			circle
+			{
+				r: 10px;
+				fill : none;
+				stroke: #9CC273;
+				stroke-width : 3px;
+				transform-origin : center;
+				-webkit-transform-origin : center;
+				-ms-transform-origin : center;
+			}
+		}
+	}
+	nav#navigation {
+		text-align: right;
+		a {
+			position: relative;
+			display: inline-block;
+			outline: none;
+			margin-top: 5px;
+			color: #313131;
+			text-decoration: none;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			text-shadow: 0 0 1px rgba(255,255,255,0.3);
+		}
+
+		a:hover,
+		a:focus {
+			outline: none;
+		}
+		a {
+			padding: 10px;
+			color: #E8ECE3;
+			font-weight: 700;
+			text-shadow: none;
+			-webkit-transition: color 0.3s;
+			-moz-transition: color 0.3s;
+			transition: color 0.3s;
+		}
+
+		a::before,
+		a::after {
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			background: #313131;
+			content: '';
+			opacity: 0;
+			-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+			-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+			transition: opacity 0.3s, transform 0.3s;
+			-webkit-transform: translateY(-10px);
+			-moz-transform: translateY(-10px);
+			transform: translateY(-10px);
+		}
+
+		a::before {
+			top: 0;
+			-webkit-transform: translateY(-10px);
+			-moz-transform: translateY(-10px);
+			transform: translateY(-10px);
+		}
+
+		a::after {
+			bottom: 0;
+			-webkit-transform: translateY(10px);
+			-moz-transform: translateY(10px);
+			transform: translateY(10px);
+		}
+
+		a:hover,
+		a:focus {
+			color: #333;
+		}
+
+		a:hover::before,
+		a:focus::before,
+		a:hover::after,
+		a:focus::after {
+			opacity: 1;
+			-webkit-transform: translateY(0px);
+			-moz-transform: translateY(0px);
+			transform: translateY(0px);
+		}
+	}
+}
+
