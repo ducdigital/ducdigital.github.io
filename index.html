@@ -3,21 +3,12 @@ title: It's all about Javascript & Node.js
 ---
 
 {% for post in paginator.posts %}
-	<div>
-		{% if forloop.index == 1 %}
-			<a href="">{{ post.title }}</a>
-		{% endfor %}
-		{% if forloop.index == 2 %}
-			<a href="">{{ post.title }}</a>
-		{% endfor %}
-	</div>
-	<div>
-		{% if forloop.index == 3 %}
-			<a href="">{{ post.title }}</a>
-		{% endfor %}
-		{% if forloop.index == 4 %}
-			<a href="">{{ post.title }}</a>
-		{% endfor %}
+	<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+	<p class="author">
+		<span class="date">{{ post.date }}</span>
+	</p>
+	<div class="content">
+		{{ post.content }}
 	</div>
 {% endfor %}
 
