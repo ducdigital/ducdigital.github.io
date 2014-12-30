@@ -10,7 +10,9 @@
 */
 
 @import "nav";
+@import "typesetting";
 
-.content {
-	margin-top: 50px;
+body {
+	min-width: 320px;
 }
+

@@ -1,5 +1,6 @@
 // Nav Bar
 nav.navbar {
+	min-width: 320px;
 	header {
 		margin: 0 auto;
 		font-size: 13px;
@@ -8,39 +9,34 @@ nav.navbar {
 		font-weight: 400;
 		color: #313131;
 	}
-	h1#logo {
+	#logo {
 		font-size: 2em;
 		margin-top: 10px;
 		margin-bottom: 10px;
-		line-height: 1em;
-		text-transform: uppercase;
-		overflow: hidden;
-		white-space: nowrap;
-		a {
-			color: #313131;
-		}
-		span {
-			display: inline-block;
-		}
-		span.i, span.o {
-			position: absolute;
-		}
-		a span.i {
-			color: #963326;
-		}
-		a span.o {
-			color: #9CC273;
-			margin-left: 7px;
-		}
-		span.full {
-			width: 66px;
+		padding: 0;
+		h1 {
+			line-height: 1em;
+			text-transform: uppercase;
 			overflow: hidden;
+			white-space: nowrap;
+			font-size: 26px;
+			margin: 0;
+			text-align: center;
 		}
 		svg {
 			width: 120px;
-			height: 100%;
-			position: absolute;
-			left: 0;
+			height: 30px;
+			text {
+				fill: #313131;
+				font-size: 28px;
+				&.i {
+					fill: #963326;
+				}
+				&.o {
+					fill: #9CC273;
+				}
+			}
+
 			circle
 			{
 				r: 10px;
@@ -54,12 +50,13 @@ nav.navbar {
 		}
 	}
 	nav#navigation {
-		text-align: right;
+		text-align: center;
 		a {
 			position: relative;
 			display: inline-block;
 			outline: none;
 			margin-top: 5px;
+			margin-bottom: 5px;
 			color: #313131;
 			text-decoration: none;
 			text-transform: uppercase;
@@ -73,7 +70,7 @@ nav.navbar {
 		}
 		a {
 			padding: 10px;
-			color: #E8ECE3;
+			color: #8cb85c;
 			font-weight: 700;
 			text-shadow: none;
 			-webkit-transition: color 0.3s;
@@ -127,5 +124,20 @@ nav.navbar {
 			transform: translateY(0px);
 		}
 	}
+}
+
+@media (min-width: 768px) {
+	nav.navbar {
+		nav#navigation {
+			text-align: right;
+			a {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+@media (min-width: 660px) {
+
 }
 
