@@ -1,6 +1,6 @@
 {% include header.html %}
 <main role="main" class="container main-body">
-	<article itemscope itemtype="http://schema.org/BlogPosting">
+	<article itemscope itemtype="http://schema.org/BlogPosting" class="row">
 		<header class="col-xs-12">
 			<h1 itemprop="headline">
 				{{ page.title }}
@@ -12,7 +12,7 @@
 			{{ content }}
 		</div>
 	</article>
-	<footer class="col-xs-12">
+	<footer class="row">
 		{% include disqus.html %}
 	</footer>
 </main>
