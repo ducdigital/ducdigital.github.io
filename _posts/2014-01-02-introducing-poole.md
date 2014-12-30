@@ -4,6 +4,26 @@ tagline: "Supporting tagline"
 tags : [intro, beginner, jekyll, tutorial]
 ---
 
+{% highlight js linenos=table %}
+$scope.forceBookedSlot = function () {
+  $scope.bookedSlot.forcing = true;
+  orderFactory.bookSlot(orderId).success(function (res) {
+    $scope.bookedSlot.forcing = false;
+    if (res.success) {
+      $scope.bookedSlot.forced = true;
+    }
+  });
+};
+{% endhighlight %}
+
+{% highlight ruby linenos %}
+def foo
+  puts 'foo'
+end
+{% endhighlight %}
+
+
+
 This Jekyll introduction will outline specifically  what Jekyll is and why you would want to use it.
 Directly following the intro we'll learn exactly _how_ Jekyll does what it does.
 

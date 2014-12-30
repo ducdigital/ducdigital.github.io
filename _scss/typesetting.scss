@@ -1,5 +1,9 @@
 code, kbd, pre, samp {
-	font-size: 1em;
+	font-size: 1.15em;
+}
+
+pre code {
+  border-radius: 6px;
 }
 
 .main-body {
