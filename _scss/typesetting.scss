@@ -1,3 +1,68 @@
 code, kbd, pre, samp {
 	font-size: 1em;
 }
+
+.main-body {
+	a {
+		position: relative;
+		display: inline-block;
+		outline: none;
+		vertical-align: bottom;
+		text-decoration: none;
+		white-space: nowrap;
+	}
+
+	a::before,
+	a::after {
+		pointer-events: none;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		-webkit-font-smoothing: antialiased;
+		font-smoothing: antialiased;
+	}
+	a {
+		padding: 0 0;
+		font-weight: 500;
+		-webkit-transition: color 0.2s;
+		transition: color 0.2s;
+	}
+
+	a:hover {
+		color: #d04c3f;
+	}
+	h1 a::before, h1 a::after {
+		top: -30%;
+	}
+	a::before,
+	a::after {
+		position: absolute;
+		top: -10%;
+		font-weight: 100;
+		font-size: 150%;
+		line-height: 1;
+		opacity: 0;
+		-webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+		transition: opacity 0.2s, transform 0.2s;
+	}
+
+	a::before {
+		left: -0.5em;
+		content: '[';
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+	}
+
+	a::after {
+		right: -0.5em;
+		content: ']';
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+	}
+
+	a:hover::before,
+	a:hover::after {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
