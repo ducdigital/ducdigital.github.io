@@ -1,4 +1,5 @@
 ---
+category : sample
 layout: posts
 title: Example content
 ---

@@ -1,4 +1,5 @@
 ---
+category : sample
 layout: posts
 title: What's Jekyll?
 ---
