@@ -1,4 +1,4 @@
-	<article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting" class="row">
+	<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" class="row">
 		<header class="col-xs-12">
 			<h1 itemprop="headline">
 				{{ page.title }}
@@ -16,7 +16,7 @@
 			</p>
 			<link itemprop="url" href="{{ post.url }}">
 		</header>
-		<main class="col-xs-12" itemprop="articleBody">
+		<div class="col-xs-12" itemprop="articleBody">
 			{{ content }}
-		</main>
+		</div>
 	</article>

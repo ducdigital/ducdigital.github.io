@@ -1,4 +1,4 @@
-	<article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting" class="row inloop">
+	<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" class="row inloop">
 		<header class="col-xs-12">
 			<h1 itemprop="headline">
 				<a href="{{ post.url }}">{{ post.title }}</a>
@@ -16,7 +16,7 @@
 			</p>
 			<link itemprop="url" href="{{ post.url }}">
 		</header>
-		<main class="col-xs-12" itemprop="articleBody">
+		<div class="col-xs-12" itemprop="articleBody">
 			{{ post.content }}
-		</main>
+		</div>
 	</article>
