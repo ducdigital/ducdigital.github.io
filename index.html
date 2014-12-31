@@ -1,18 +1,9 @@
 ---
 title: It's all about Javascript & Node.js
+description: Duc.io Homepage about javascript & node.js
+tags: [html,node,javascript,css3,html5]
 ---
 
 {% for post in paginator.posts %}
-	<article itemscope itemtype="http://schema.org/BlogPosting" class="row">
-		<header class="col-xs-12">
-			<h1 itemprop="headline">
-				<a href="{{ post.url }}">{{ post.title }}</a>
-			</h1>
-			<time class="date" itemprop="datePublished" datetime="{{ post.date }}">Posted {{ post.date | date_to_string }}</time>
-			<link itemprop="url" href="{{ post.url }}">
-		</header>
-		<div class="col-xs-12">
-			{{ post.content }}
-		</div>
-	</article>
+	{% include _article.loop.html %}
 {% endfor %}

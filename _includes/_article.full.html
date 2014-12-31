@@ -1,0 +1,22 @@
+	<article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting" class="row">
+		<header class="col-xs-12">
+			<h1 itemprop="headline">
+				{{ page.title }}
+			</h1>
+			<p>
+				<time class="date" itemprop="datePublished" datetime="{{ page.date }}">Posted {{ page.date | date_to_string }}</time> |
+				<span>Tags:</span>
+				{% for tag in page.tags %}
+					<a href="{{ site.baseurl }}/tags/#{{ tag }}">{{ tag }}</a>
+				{% endfor %} |
+				<span>Categories: </span>
+				{% for category in page.categories %}
+					<a href="{{ site.baseurl }}/category/{{ category }}">{{ category }}</a>
+				{% endfor %}
+			</p>
+			<link itemprop="url" href="{{ post.url }}">
+		</header>
+		<main class="col-xs-12" itemprop="articleBody">
+			{{ content }}
+		</main>
+	</article>

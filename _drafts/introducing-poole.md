@@ -1,7 +1,8 @@
 ---
-category : lessons
-tagline: "Supporting tagline"
-tags : [intro, beginner, jekyll, tutorial]
+title: Introducing Poole Detail
+description: Introduing poole project
+tags: [html,node,javascript,css3,html5]
+category : sample
 ---
 
 {% highlight js linenos=table %}

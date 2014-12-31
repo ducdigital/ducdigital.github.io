@@ -2,6 +2,7 @@
 
 name: DucDigital - Duc.io
 description: DucDigital tech blog
+author: DucDigital
 
 # url is currently only used only for the RSS feed in feed.xml
 url: http://duc.io
@@ -24,6 +25,8 @@ permalink: /:categories/:year/:month/:title
 
 paginate: 3
 paginate_path: "/page/:num/"
+
+related_posts_max: 5
 
 markdown: redcarpet
 highlighter: pygments
@@ -53,10 +56,20 @@ defaults:
       type: 'pages'
     values:
       layout: 'home'
+      tags: []
   -
     scope:
       path: '' # an empty string here means all files in the project
       type: 'posts'
     values:
       layout: 'posts'
-      category: 'uncategorize'
+      category: 'general'
+      tags: []
+  -
+    scope:
+      path: '' # an empty string here means all files in the project
+      type: 'drafts'
+    values:
+      layout: 'posts'
+      category: 'general'
+      tags: []

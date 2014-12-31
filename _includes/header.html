@@ -4,6 +4,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1.0">
+	<meta name="description" content="{{ page.description }}">
+	<meta name="keywords" content="{{ page.tags | array_to_sentence_string }}">
+	<meta name="author" content="{{ site.author }}">
 	<title>{{ site.name }}{% if page.title != "" and page.title != nil %} - {{ page.title }}{% endif %}</title>
 
 	<!-- Latest compiled and minified JavaScript -->
@@ -19,7 +22,7 @@
 	<link rel="alternate" type="application/rss+xml" title="RSS Feed for duc.io" href="{{ site.baseurl }}/feed.xml" />
 </head>
 
-<body>
+<body itemscope itemtype="http://schema.org/Blog">
 
 <nav class="navbar navbar-default">
 	<header class="container">
@@ -47,8 +50,8 @@
 			</h1>
 		</div>
 		<nav class="col-xs-12 col-sm-10" id="navigation">
-			<a href="#">Blog</a>
-			<a href="#">Projects</a>
+			<a href="http://duc.io/">Blog</a>
+			<a href="https://github.com/ducdigital">Projects</a>
 			<a href="#">About Me</a>
 			<a href="#">Contact</a>
 		</nav>

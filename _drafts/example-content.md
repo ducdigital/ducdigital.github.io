@@ -1,7 +1,8 @@
 ---
-category : sample
-layout: posts
 title: Example content
+description: This is just an example content
+tags: [html,node,javascript,css3,html5]
+category : sample
 ---
 
 Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. *Aenean eu leo quam.* Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.

@@ -37,6 +37,15 @@ pre code {
 	h1 a::before, h1 a::after {
 		top: -30%;
 	}
+	#post-content {
+		a::before, a::after {
+			top: 22px;
+		}
+
+		a.list-group-item::before, a.list-group-item::after {
+			top: 7px;
+		}
+	}
 	a::before,
 	a::after {
 		position: absolute;

@@ -1,0 +1,32 @@
+---
+title: Tags list
+description: List of tags in Duc.io's blog
+permalink: tags/
+---
+
+<header id="post-header">
+    <h1 id="post-title">All tags</h1>
+</header>
+
+<ul id="post-content">
+    {% if site.tags %}
+        {% for tag in site.tags %}
+	        <li><a name="{{ tag[0] }}" id="{{ tag[0] }}"><h3>{{ tag[0] }}</h3></a>
+				<ul class="list-group">
+
+				{% for post in tag[1] %}
+				<li>
+					<a href="{{ post.url }}/" class="list-group-item">
+				    	<h4 class="list-group-item-heading">{{ post.title }}</h4>
+					</a>
+				</li>
+				{% endfor %}
+				</ul>
+            {% if forloop.last %}
+            </li>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <p>There are no tags.</p>
+    {% endif %}
+</ul>

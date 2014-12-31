@@ -1,20 +1,15 @@
 {% include header.html %}
 <main role="main" class="container main-body">
-	<article itemscope itemtype="http://schema.org/BlogPosting" class="row">
-		<header class="col-xs-12">
-			<h1 itemprop="headline">
-				{{ page.title }}
-			</h1>
-			<time class="date" itemprop="datePublished" datetime="{{ page.date }}">Posted {{ page.date | date_to_string }}</time>
-			<link itemprop="url" href="{{ post.url }}">
-		</header>
-		<div class="col-xs-12">
-			{{ content }}
-		</div>
-	</article>
+	{% include _article.full.html %}
 	<footer class="row">
 		{% include disqus.html %}
 	</footer>
 </main>
+<aside>
+	{% for category in site.categories %}
+		<li><a name="{{ category | first }}">{{ category | first }}</a></li>
+	{% endfor %}
+	{% include related_post.html %}
+</aside>
 {% include footer.html %}
 
