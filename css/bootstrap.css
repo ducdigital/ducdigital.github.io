@@ -716,7 +716,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: Consolas;
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
 code {
   padding: 2px 4px;
