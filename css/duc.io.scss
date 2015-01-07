@@ -2,9 +2,7 @@
 # this ensures Jekyll reads the file to be transformed into CSS later
 # only Main files contain this front matter, not partials.
 ---
-@import url('http://fonts.googleapis.com/css?family=Montserrat');
-@import url('http://fonts.googleapis.com/css?family=Open Sans');
-@import url('http://fonts.googleapis.com/css?family=Consolas');
+@import url('http://fonts.googleapis.com/css?family=Montserrat|Open%20Sans|Consolas');
 /*
  @import url('http://fonts.googleapis.com/css?family=Vollkorn');
 */
